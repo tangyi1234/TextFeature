@@ -19,11 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = [UIColor whiteColor];    
-    NSString *str = [NSString stringWithFormat:@"%@",@"今天是个好天气，有 度"];
-    NSArray *arrData = [NSArray arrayWithObjects:@"20", nil];
+    self.view.backgroundColor = [UIColor whiteColor];
     UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, [UIScreen mainScreen].bounds.size.width, 100)];
     [self.view addSubview:lbl];
+    
+    NSString *str = [NSString stringWithFormat:@"%@",@"今天是个好天气，有 度"];
+    NSArray *arrData = [NSArray arrayWithObjects:@"20", nil];
     lbl.attributedText = [TextFeature textFeatureStr:str dataArr:arrData dataColor:GlobalYellowColor dataTextFont:GlobalProtocalTextFont];
 }
 
